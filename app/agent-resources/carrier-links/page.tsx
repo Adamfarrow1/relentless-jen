@@ -1,4 +1,5 @@
 import { ExternalLink } from "lucide-react"
+import { FadeIn } from "@/components/fade-in"
 
 export default function CarrierLinksPage() {
   const carriers = [
@@ -26,13 +27,15 @@ export default function CarrierLinksPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/5 via-background to-accent/5 py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
-            <ExternalLink className="h-16 w-16 mx-auto text-primary" />
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground text-balance">Carrier Links</h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Direct access to carrier portals for quoting, applications, and policy management
-            </p>
-          </div>
+          <FadeIn>
+            <div className="max-w-3xl mx-auto text-center space-y-6">
+              <ExternalLink className="h-16 w-16 mx-auto text-primary" />
+              <h1 className="text-4xl md:text-5xl font-bold text-foreground text-balance">Carrier Links</h1>
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                Direct access to carrier portals for quoting, applications, and policy management
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -41,16 +44,17 @@ export default function CarrierLinksPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-              {carriers.map((carrier) => (
-                <a
-                  key={carrier.name}
-                  href={carrier.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-6 py-4 bg-primary text-primary-foreground rounded-md font-medium text-center hover:bg-primary/90 transition-colors"
-                >
-                  {carrier.name}
-                </a>
+              {carriers.map((carrier, index) => (
+                <FadeIn key={carrier.name} delay={0.08 * index}>
+                  <a
+                    href={carrier.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 px-6 py-4 bg-primary text-primary-foreground rounded-md font-medium text-center hover:bg-primary/90 transition-colors"
+                  >
+                    {carrier.name}
+                  </a>
+                </FadeIn>
               ))}
             </div>
           </div>

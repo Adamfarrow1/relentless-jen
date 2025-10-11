@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { BookOpen, FileText, GraduationCap, LinkIcon, Shield, Users } from "lucide-react"
+import { FadeIn } from "@/components/fade-in"
 
 export default function AgentResourcesPage() {
   const resourceCategories = [
@@ -47,13 +48,15 @@ export default function AgentResourcesPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/5 via-background to-accent/5 py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
-            <Users className="h-16 w-16 mx-auto text-primary" />
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground text-balance">Agent Resources</h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Everything you need to succeed as an independent insurance agent, all in one convenient location.
-            </p>
-          </div>
+          <FadeIn>
+            <div className="max-w-3xl mx-auto text-center space-y-6">
+              <Users className="h-16 w-16 mx-auto text-primary" />
+              <h1 className="text-4xl md:text-5xl font-bold text-foreground text-balance">Agent Resources</h1>
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                Everything you need to succeed as an independent insurance agent, all in one convenient location.
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -61,24 +64,28 @@ export default function AgentResourcesPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-8">
-            <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">Your Success is Our Priority</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                We provide comprehensive resources, training, and support to help you build and grow your insurance
-                business with confidence.
-              </p>
-            </div>
-
-            <Card className="border-border">
-              <CardContent className="p-8">
-                <p className="text-muted-foreground leading-relaxed">
-                  From carrier certifications and training materials to compliance resources and marketing support,
-                  Relentless Jen gives you access to everything you need to serve your clients effectively and grow your
-                  business. Our dedicated support team is always here to help you navigate challenges and seize
-                  opportunities.
+            <FadeIn>
+              <div className="text-center space-y-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground">Your Success is Our Priority</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  We provide comprehensive resources, training, and support to help you build and grow your insurance
+                  business with confidence.
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.2}>
+              <Card className="border-border">
+                <CardContent className="p-8">
+                  <p className="text-muted-foreground leading-relaxed">
+                    From carrier certifications and training materials to compliance resources and marketing support,
+                    Relentless Jen gives you access to everything you need to serve your clients effectively and grow your
+                    business. Our dedicated support team is always here to help you navigate challenges and seize
+                    opportunities.
+                  </p>
+                </CardContent>
+              </Card>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -87,30 +94,34 @@ export default function AgentResourcesPage() {
       <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto space-y-12">
-            <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">Available Resources</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Comprehensive tools and materials to support every aspect of your business
-              </p>
-            </div>
+            <FadeIn>
+              <div className="text-center space-y-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground">Available Resources</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Comprehensive tools and materials to support every aspect of your business
+                </p>
+              </div>
+            </FadeIn>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {resourceCategories.map((category) => {
+              {resourceCategories.map((category, index) => {
                 const Icon = category.icon
                 return (
-                  <Link key={category.href} href={category.href}>
-                    <Card className="border-border h-full hover:border-primary transition-colors">
-                      <CardContent className="p-8 space-y-4">
-                        <div
-                          className={`w-12 h-12 rounded-full bg-${category.color}/10 flex items-center justify-center`}
-                        >
-                          <Icon className={`h-6 w-6 text-${category.color}`} />
-                        </div>
-                        <h3 className="text-xl font-semibold text-foreground">{category.title}</h3>
-                        <p className="text-muted-foreground leading-relaxed">{category.description}</p>
-                      </CardContent>
-                    </Card>
-                  </Link>
+                  <FadeIn key={category.href} delay={0.1 + index * 0.1}>
+                    <Link href={category.href}>
+                      <Card className="border-border h-full hover:border-primary transition-colors">
+                        <CardContent className="p-8 space-y-4">
+                          <div
+                            className={`w-12 h-12 rounded-full bg-${category.color}/10 flex items-center justify-center`}
+                          >
+                            <Icon className={`h-6 w-6 text-${category.color}`} />
+                          </div>
+                          <h3 className="text-xl font-semibold text-foreground">{category.title}</h3>
+                          <p className="text-muted-foreground leading-relaxed">{category.description}</p>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  </FadeIn>
                 )
               })}
             </div>
@@ -122,15 +133,18 @@ export default function AgentResourcesPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-8">
-            <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">Request Contracting</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Ready to get contracted with our carrier partners? Submit your information and our team will guide you
-                through the process.
-              </p>
-            </div>
+            <FadeIn>
+              <div className="text-center space-y-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground">Request Contracting</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Ready to get contracted with our carrier partners? Submit your information and our team will guide you
+                  through the process.
+                </p>
+              </div>
+            </FadeIn>
 
-            <Card className="border-border">
+            <FadeIn delay={0.2}>
+              <Card className="border-border">
               <CardContent className="p-8">
                 <form className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -242,6 +256,7 @@ export default function AgentResourcesPage() {
                 </form>
               </CardContent>
             </Card>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -249,21 +264,23 @@ export default function AgentResourcesPage() {
       {/* Support Section */}
       <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Need Help?</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Our dedicated support team is here to assist you with any questions about resources, contracting, or
-              growing your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
-                <Link href="/contact">Contact Support</Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <a href="tel:9175572405">Call (917) 557-2405</a>
-              </Button>
+          <FadeIn>
+            <div className="max-w-3xl mx-auto text-center space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">Need Help?</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Our dedicated support team is here to assist you with any questions about resources, contracting, or
+                growing your business.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" asChild>
+                  <Link href="/contact">Contact Support</Link>
+                </Button>
+                <Button size="lg" variant="outline" asChild>
+                  <a href="tel:9175572405">Call (917) 557-2405</a>
+                </Button>
+              </div>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </section>
     </main>

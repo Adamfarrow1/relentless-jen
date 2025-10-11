@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { BookOpen } from "lucide-react"
+import { FadeIn } from "@/components/fade-in"
 
 export default function ResourcesLibraryPage() {
   const resources = [
@@ -30,36 +31,40 @@ export default function ResourcesLibraryPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/5 via-background to-accent/5 py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
-            <BookOpen className="h-16 w-16 mx-auto text-primary" />
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground text-balance">Resources Library</h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Comprehensive training materials, guides, and marketing resources
-            </p>
-          </div>
+          <FadeIn>
+            <div className="max-w-3xl mx-auto text-center space-y-6">
+              <BookOpen className="h-16 w-16 mx-auto text-primary" />
+              <h1 className="text-4xl md:text-5xl font-bold text-foreground text-balance">Resources Library</h1>
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                Comprehensive training materials, guides, and marketing resources
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto space-y-12">
-            <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">2025 Plan Resources</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Download the latest plan information and important notices
-              </p>
-            </div>
+            <FadeIn>
+              <div className="text-center space-y-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground">2025 Plan Resources</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Download the latest plan information and important notices
+                </p>
+              </div>
+            </FadeIn>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {resources.map((resource, index) => (
-                <a
-                  key={index}
-                  href={resource.downloadUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block group"
-                >
-                  <Card className="border-border h-full transition-all hover:shadow-lg hover:border-primary/50">
+                <FadeIn key={index} delay={0.1 + index * 0.1}>
+                  <a
+                    href={resource.downloadUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block group"
+                  >
+                    <Card className="border-border h-full transition-all hover:shadow-lg hover:border-primary/50">
                     <CardContent className="p-8 space-y-6 text-center h-full flex flex-col items-center justify-center">
                       <div className="w-20 h-20 mx-auto">
                         <img
@@ -77,10 +82,12 @@ export default function ResourcesLibraryPage() {
                     </CardContent>
                   </Card>
                 </a>
+                </FadeIn>
               ))}
             </div>
 
-            <Card className="border-border">
+            <FadeIn delay={0.4}>
+              <Card className="border-border">
               <CardContent className="p-8">
                 <p className="text-muted-foreground leading-relaxed text-center">
                   All resources are regularly updated to reflect the latest products, regulations, and industry best
@@ -88,12 +95,15 @@ export default function ResourcesLibraryPage() {
                 </p>
               </CardContent>
             </Card>
+            </FadeIn>
 
-            <div className="text-center">
-              <Button asChild size="lg">
-                <Link href="/contact">Contact Us for More Resources</Link>
-              </Button>
-            </div>
+            <FadeIn delay={0.6}>
+              <div className="text-center">
+                <Button asChild size="lg">
+                  <Link href="/contact">Contact Us for More Resources</Link>
+                </Button>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>

@@ -9,7 +9,7 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-4 font-semibold text-xl">
-              <img src="logo_relentlessjen.jpeg" alt="Relentless Jen" className="h-16 w-16" />
+              <img src="/logo_relentlessjen-removebg-preview.png" alt="Relentless Jen" className="h-16 w-16" />
               <span className="text-foreground">Relentless Jen</span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
