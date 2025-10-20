@@ -65,36 +65,36 @@ export default function ResourcesLibraryPage() {
                     className="block group"
                   >
                     <Card className="border-border h-full transition-all hover:shadow-lg hover:border-primary/50">
-                    <CardContent className="p-8 space-y-6 text-center h-full flex flex-col items-center justify-center">
-                      <div className="w-20 h-20 mx-auto">
-                        <img
-                          src="https://jhahealth.com/wp-content/uploads/2025/01/filedownload.png"
-                          alt="Download"
-                          className="w-full h-full object-contain"
-                        />
-                      </div>
-                      <div className="space-y-3">
-                        <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
-                          {resource.title}
-                        </h3>
-                        <p className="text-muted-foreground leading-relaxed">{resource.description}</p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </a>
+                      <CardContent className="p-8 space-y-6 text-center h-full flex flex-col items-center justify-center">
+                        <div className="w-20 h-20 mx-auto">
+                          <img
+                            src="https://jhahealth.com/wp-content/uploads/2025/01/filedownload.png"
+                            alt="Download"
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                        <div className="space-y-3">
+                          <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                            {resource.title}
+                          </h3>
+                          <p className="text-muted-foreground leading-relaxed">{resource.description}</p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </a>
                 </FadeIn>
               ))}
             </div>
 
             <FadeIn delay={0.4}>
               <Card className="border-border">
-              <CardContent className="p-8">
-                <p className="text-muted-foreground leading-relaxed text-center">
-                  All resources are regularly updated to reflect the latest products, regulations, and industry best
-                  practices. Contact our team for additional resources or assistance.
-                </p>
-              </CardContent>
-            </Card>
+                <CardContent className="p-8">
+                  <p className="text-muted-foreground leading-relaxed text-center">
+                    All resources are regularly updated to reflect the latest products, regulations, and industry best
+                    practices. Contact our team for additional resources or assistance.
+                  </p>
+                </CardContent>
+              </Card>
             </FadeIn>
 
             <FadeIn delay={0.6}>

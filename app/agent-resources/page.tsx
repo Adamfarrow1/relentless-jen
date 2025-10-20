@@ -145,117 +145,117 @@ export default function AgentResourcesPage() {
 
             <FadeIn delay={0.2}>
               <Card className="border-border">
-              <CardContent className="p-8">
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <CardContent className="p-8">
+                  <form className="space-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <label htmlFor="firstName" className="text-sm font-medium text-foreground">
+                          First Name *
+                        </label>
+                        <input
+                          type="text"
+                          id="firstName"
+                          className="w-full px-4 py-2 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                          required
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <label htmlFor="lastName" className="text-sm font-medium text-foreground">
+                          Last Name *
+                        </label>
+                        <input
+                          type="text"
+                          id="lastName"
+                          className="w-full px-4 py-2 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                          required
+                        />
+                      </div>
+                    </div>
+
                     <div className="space-y-2">
-                      <label htmlFor="firstName" className="text-sm font-medium text-foreground">
-                        First Name *
+                      <label htmlFor="email" className="text-sm font-medium text-foreground">
+                        Email Address *
                       </label>
                       <input
-                        type="text"
-                        id="firstName"
+                        type="email"
+                        id="email"
                         className="w-full px-4 py-2 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                         required
                       />
                     </div>
+
                     <div className="space-y-2">
-                      <label htmlFor="lastName" className="text-sm font-medium text-foreground">
-                        Last Name *
+                      <label htmlFor="phone" className="text-sm font-medium text-foreground">
+                        Phone Number *
                       </label>
                       <input
-                        type="text"
-                        id="lastName"
+                        type="tel"
+                        id="phone"
                         className="w-full px-4 py-2 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                         required
                       />
                     </div>
-                  </div>
 
-                  <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium text-foreground">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      className="w-full px-4 py-2 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                      required
-                    />
-                  </div>
+                    <div className="space-y-2">
+                      <label htmlFor="license" className="text-sm font-medium text-foreground">
+                        License Number *
+                      </label>
+                      <input
+                        type="text"
+                        id="license"
+                        className="w-full px-4 py-2 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                        required
+                      />
+                    </div>
 
-                  <div className="space-y-2">
-                    <label htmlFor="phone" className="text-sm font-medium text-foreground">
-                      Phone Number *
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      className="w-full px-4 py-2 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                      required
-                    />
-                  </div>
+                    <div className="space-y-2">
+                      <label htmlFor="state" className="text-sm font-medium text-foreground">
+                        Licensed State(s) *
+                      </label>
+                      <input
+                        type="text"
+                        id="state"
+                        placeholder="e.g., CA, TX, FL"
+                        className="w-full px-4 py-2 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                        required
+                      />
+                    </div>
 
-                  <div className="space-y-2">
-                    <label htmlFor="license" className="text-sm font-medium text-foreground">
-                      License Number *
-                    </label>
-                    <input
-                      type="text"
-                      id="license"
-                      className="w-full px-4 py-2 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                      required
-                    />
-                  </div>
+                    <div className="space-y-2">
+                      <label htmlFor="products" className="text-sm font-medium text-foreground">
+                        Products of Interest *
+                      </label>
+                      <select
+                        id="products"
+                        className="w-full px-4 py-2 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                        required
+                      >
+                        <option value="">Select products...</option>
+                        <option value="health">Health Insurance</option>
+                        <option value="life">Life Insurance</option>
+                        <option value="annuities">Annuities</option>
+                        <option value="all">All Products</option>
+                      </select>
+                    </div>
 
-                  <div className="space-y-2">
-                    <label htmlFor="state" className="text-sm font-medium text-foreground">
-                      Licensed State(s) *
-                    </label>
-                    <input
-                      type="text"
-                      id="state"
-                      placeholder="e.g., CA, TX, FL"
-                      className="w-full px-4 py-2 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                      required
-                    />
-                  </div>
+                    <div className="space-y-2">
+                      <label htmlFor="message" className="text-sm font-medium text-foreground">
+                        Additional Information
+                      </label>
+                      <textarea
+                        id="message"
+                        rows={4}
+                        className="w-full px-4 py-2 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
+                        placeholder="Tell us about your experience and goals..."
+                      />
+                    </div>
 
-                  <div className="space-y-2">
-                    <label htmlFor="products" className="text-sm font-medium text-foreground">
-                      Products of Interest *
-                    </label>
-                    <select
-                      id="products"
-                      className="w-full px-4 py-2 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                      required
-                    >
-                      <option value="">Select products...</option>
-                      <option value="health">Health Insurance</option>
-                      <option value="life">Life Insurance</option>
-                      <option value="annuities">Annuities</option>
-                      <option value="all">All Products</option>
-                    </select>
-                  </div>
-
-                  <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium text-foreground">
-                      Additional Information
-                    </label>
-                    <textarea
-                      id="message"
-                      rows={4}
-                      className="w-full px-4 py-2 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
-                      placeholder="Tell us about your experience and goals..."
-                    />
-                  </div>
-
-                  <Button type="submit" size="lg" className="w-full">
-                    Submit Contracting Request
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+                    <Button type="submit" size="lg" className="w-full">
+                      Submit Contracting Request
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
             </FadeIn>
           </div>
         </div>

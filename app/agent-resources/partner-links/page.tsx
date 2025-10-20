@@ -46,26 +46,26 @@ export default function PartnerLinksPage() {
               {partnerLinks.map((partner, index) => (
                 <FadeIn key={partner.name} delay={0.1 + index * 0.1}>
                   <Card className="border-border hover:border-primary/50 transition-colors">
-                  <CardContent className="p-8">
-                    <a
-                      href={partner.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex flex-col items-center gap-6 group"
-                    >
-                      <h2 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors text-center">
-                        {partner.name}
-                      </h2>
-                      <div className="relative w-full h-24 flex items-center justify-center">
-                        <img
-                          src={partner.logo || "/placeholder.svg"}
-                          alt={`${partner.name} logo`}
-                          className="max-w-full max-h-full object-contain"
-                        />
-                      </div>
-                    </a>
-                  </CardContent>
-                </Card>
+                    <CardContent className="p-8">
+                      <a
+                        href={partner.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-col items-center gap-6 group"
+                      >
+                        <h2 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors text-center">
+                          {partner.name}
+                        </h2>
+                        <div className="relative w-full h-24 flex items-center justify-center">
+                          <img
+                            src={partner.logo || "/placeholder.svg"}
+                            alt={`${partner.name} logo`}
+                            className="max-w-full max-h-full object-contain"
+                          />
+                        </div>
+                      </a>
+                    </CardContent>
+                  </Card>
                 </FadeIn>
               ))}
             </div>

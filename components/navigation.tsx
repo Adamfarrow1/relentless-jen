@@ -68,12 +68,12 @@ export function Navigation() {
                 </div>
               )}
             </div>
-            <Link
+            {/* <Link
               href="/contact"
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Contact
-            </Link>
+            </Link> */}
             <Button asChild>
               <Link href="/contact">Become an Agent</Link>
             </Button>
@@ -121,13 +121,13 @@ export function Navigation() {
                 </div>
               )}
             </div>
-            <Link
+            {/* <Link
               href="/contact"
               className="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Contact
-            </Link>
+            </Link> */}
             <Button asChild className="w-full">
               <Link href="/contact" onClick={() => setIsOpen(false)}>
                 Become an Agent

@@ -70,13 +70,13 @@ export default function LifeAnnuitiesPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Term Life */}
               <FadeIn delay={0.1}>
-                <Card className="border-border">
-                  <CardContent className="p-8 space-y-4">
+                <Card className="border-border h-full">
+                  <CardContent className="p-8 space-y-4 h-full flex flex-col">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                       <Shield className="h-6 w-6 text-primary" />
                     </div>
                     <h3 className="text-2xl font-semibold text-foreground">Term Life Insurance</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed flex-1">
                       Affordable protection for a specific period, ideal for young families and those with temporary
                       coverage needs.
                     </p>
@@ -100,13 +100,13 @@ export default function LifeAnnuitiesPage() {
 
               {/* Whole Life */}
               <FadeIn delay={0.2}>
-                <Card className="border-border">
-                  <CardContent className="p-8 space-y-4">
+                <Card className="border-border h-full">
+                  <CardContent className="p-8 space-y-4 h-full flex flex-col">
                     <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
                       <TrendingUp className="h-6 w-6 text-accent" />
                     </div>
                     <h3 className="text-2xl font-semibold text-foreground">Whole Life Insurance</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed flex-1">
                       Permanent coverage with guaranteed cash value accumulation and lifelong protection for estate
                       planning needs.
                     </p>
@@ -130,13 +130,13 @@ export default function LifeAnnuitiesPage() {
 
               {/* Universal Life */}
               <FadeIn delay={0.3}>
-                <Card className="border-border">
-                  <CardContent className="p-8 space-y-4">
+                <Card className="border-border h-full">
+                  <CardContent className="p-8 space-y-4 h-full flex flex-col">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                       <PiggyBank className="h-6 w-6 text-primary" />
                     </div>
                     <h3 className="text-2xl font-semibold text-foreground">Universal Life Insurance</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed flex-1">
                       Flexible permanent coverage with adjustable premiums and death benefits to adapt to changing needs.
                     </p>
                     <ul className="space-y-2 text-sm text-muted-foreground">
@@ -177,13 +177,13 @@ export default function LifeAnnuitiesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Fixed Annuities */}
               <FadeIn delay={0.1}>
-                <Card className="border-border">
-                  <CardContent className="p-8 space-y-4">
+                <Card className="border-border h-full">
+                  <CardContent className="p-8 space-y-4 h-full flex flex-col">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                       <Shield className="h-6 w-6 text-primary" />
                     </div>
                     <h3 className="text-2xl font-semibold text-foreground">Fixed Annuities</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed flex-1">
                       Guaranteed interest rates and predictable income streams for conservative investors seeking
                       stability in retirement.
                     </p>
@@ -211,13 +211,13 @@ export default function LifeAnnuitiesPage() {
 
               {/* Variable Annuities */}
               <FadeIn delay={0.2}>
-                <Card className="border-border">
-                  <CardContent className="p-8 space-y-4">
+                <Card className="border-border h-full">
+                  <CardContent className="p-8 space-y-4 h-full flex flex-col">
                     <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
                       <TrendingUp className="h-6 w-6 text-accent" />
                     </div>
                     <h3 className="text-2xl font-semibold text-foreground">Variable Annuities</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed flex-1">
                       Investment-linked annuities with growth potential through market participation and optional income
                       guarantees.
                     </p>
@@ -262,10 +262,10 @@ export default function LifeAnnuitiesPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <FadeIn delay={0.1}>
-                <Card className="border-border">
-                  <CardContent className="p-6 space-y-3">
+                <Card className="border-border h-full">
+                  <CardContent className="p-6 space-y-3 h-full flex flex-col">
                     <h3 className="text-xl font-semibold text-foreground">Visual Sales Tools</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed flex-1">
                       Access professional illustrations and calculators to help clients understand complex products and
                       make informed decisions.
                     </p>
@@ -274,10 +274,10 @@ export default function LifeAnnuitiesPage() {
               </FadeIn>
 
               <FadeIn delay={0.2}>
-                <Card className="border-border">
-                  <CardContent className="p-6 space-y-3">
+                <Card className="border-border h-full">
+                  <CardContent className="p-6 space-y-3 h-full flex flex-col">
                     <h3 className="text-xl font-semibold text-foreground">Product Training</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed flex-1">
                       Comprehensive training on all life insurance and annuity products, including underwriting guidelines
                       and sales strategies.
                     </p>
@@ -286,10 +286,10 @@ export default function LifeAnnuitiesPage() {
               </FadeIn>
 
               <FadeIn delay={0.3}>
-                <Card className="border-border">
-                  <CardContent className="p-6 space-y-3">
+                <Card className="border-border h-full">
+                  <CardContent className="p-6 space-y-3 h-full flex flex-col">
                     <h3 className="text-xl font-semibold text-foreground">Case Design Support</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed flex-1">
                       Expert assistance with complex cases, including estate planning and business succession strategies.
                     </p>
                   </CardContent>
@@ -297,10 +297,10 @@ export default function LifeAnnuitiesPage() {
               </FadeIn>
 
               <FadeIn delay={0.4}>
-                <Card className="border-border">
-                  <CardContent className="p-6 space-y-3">
+                <Card className="border-border h-full">
+                  <CardContent className="p-6 space-y-3 h-full flex flex-col">
                     <h3 className="text-xl font-semibold text-foreground">Compliance Guidance</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed flex-1">
                       Stay compliant with up-to-date information on regulations, suitability requirements, and best
                       practices.
                     </p>

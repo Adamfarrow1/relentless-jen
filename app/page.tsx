@@ -17,9 +17,9 @@ export default function HomePage() {
             muted
             playsInline
             preload="auto"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover min-h-screen"
           >
-            <source src="/scenic-view-of-mountains-against-sky-during-sunset-1080p-2025-08-29-07-13-17-utc.mp4" type="video/mp4" />
+            <source src="/running.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           {/* Fallback background image */}
@@ -76,13 +76,13 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <FadeIn delay={0.1}>
-              <Card className="border-border">
-                <CardContent className="pt-6 text-center space-y-4">
+              <Card className="border-border h-full">
+                <CardContent className="pt-6 text-center space-y-4 h-full flex flex-col">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
                     <Shield className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="text-xl font-semibold text-foreground">Integrity</h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed flex-1">
                     We operate with transparency and honesty in every interaction, building lasting relationships based on
                     trust.
                   </p>
@@ -91,13 +91,13 @@ export default function HomePage() {
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <Card className="border-border">
-                <CardContent className="pt-6 text-center space-y-4">
+              <Card className="border-border h-full">
+                <CardContent className="pt-6 text-center space-y-4 h-full flex flex-col">
                   <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mx-auto">
                     <BookOpen className="h-6 w-6 text-accent" />
                   </div>
                   <h3 className="text-xl font-semibold text-foreground">Education</h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed flex-1">
                     Continuous learning and training resources to keep our agents informed and competitive in the
                     marketplace.
                   </p>
@@ -106,13 +106,13 @@ export default function HomePage() {
             </FadeIn>
 
             <FadeIn delay={0.3}>
-              <Card className="border-border">
-                <CardContent className="pt-6 text-center space-y-4">
+              <Card className="border-border h-full">
+                <CardContent className="pt-6 text-center space-y-4 h-full flex flex-col">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
                     <Award className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="text-xl font-semibold text-foreground">Service</h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed flex-1">
                     Dedicated support and resources to help agents deliver exceptional service to their clients.
                   </p>
                 </CardContent>

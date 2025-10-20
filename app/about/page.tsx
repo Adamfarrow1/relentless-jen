@@ -66,13 +66,13 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <FadeIn delay={0.1}>
-                <Card className="border-border">
-                  <CardContent className="p-8 space-y-4">
+                <Card className="border-border h-full">
+                  <CardContent className="p-8 space-y-4 h-full flex flex-col">
                     <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
                       <Shield className="h-7 w-7 text-primary" />
                     </div>
                     <h3 className="text-2xl font-semibold text-foreground">Integrity</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed flex-1">
                       We operate with complete transparency and honesty in every interaction. Our agents and clients can
                       trust that we always have their best interests at heart.
                     </p>
@@ -81,13 +81,13 @@ export default function AboutPage() {
               </FadeIn>
 
               <FadeIn delay={0.2}>
-                <Card className="border-border">
-                  <CardContent className="p-8 space-y-4">
+                <Card className="border-border h-full">
+                  <CardContent className="p-8 space-y-4 h-full flex flex-col">
                     <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center">
                       <Target className="h-7 w-7 text-accent" />
                     </div>
                     <h3 className="text-2xl font-semibold text-foreground">Education</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed flex-1">
                       We invest in continuous learning and professional development, providing our agents with the
                       knowledge and training they need to stay competitive.
                     </p>
@@ -96,13 +96,13 @@ export default function AboutPage() {
               </FadeIn>
 
               <FadeIn delay={0.3}>
-                <Card className="border-border">
-                  <CardContent className="p-8 space-y-4">
+                <Card className="border-border h-full">
+                  <CardContent className="p-8 space-y-4 h-full flex flex-col">
                     <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
                       <Award className="h-7 w-7 text-primary" />
                     </div>
                     <h3 className="text-2xl font-semibold text-foreground">Service</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed flex-1">
                       Exceptional service is at the heart of everything we do. We're committed to supporting our agents so
                       they can deliver outstanding experiences to their clients.
                     </p>

@@ -134,7 +134,7 @@ export default function ACALinksPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-primary/5">
+      {/* <section className="py-16 bg-primary/5">
         <div className="container mx-auto px-4">
           <FadeIn>
             <div className="max-w-3xl mx-auto text-center space-y-6">
@@ -147,7 +147,7 @@ export default function ACALinksPage() {
             </div>
           </FadeIn>
         </div>
-      </section>
+      </section> */}
     </main>
   )
 }

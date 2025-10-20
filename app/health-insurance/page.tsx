@@ -70,13 +70,13 @@ export default function HealthInsurancePage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Medicare Advantage */}
               <FadeIn delay={0.1}>
-                <Card className="border-border">
-                  <CardContent className="p-8 space-y-4">
+                <Card className="border-border h-full">
+                  <CardContent className="p-8 space-y-4 h-full flex flex-col">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                       <Shield className="h-6 w-6 text-primary" />
                     </div>
                     <h3 className="text-2xl font-semibold text-foreground">Medicare Advantage</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed flex-1">
                       Comprehensive Medicare coverage that goes beyond Original Medicare, often including prescription
                       drug coverage, dental, vision, and hearing benefits.
                     </p>
@@ -100,13 +100,13 @@ export default function HealthInsurancePage() {
 
               {/* ACA Plans */}
               <FadeIn delay={0.2}>
-                <Card className="border-border">
-                  <CardContent className="p-8 space-y-4">
+                <Card className="border-border h-full">
+                  <CardContent className="p-8 space-y-4 h-full flex flex-col">
                     <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
                       <Users className="h-6 w-6 text-accent" />
                     </div>
                     <h3 className="text-2xl font-semibold text-foreground">ACA Marketplace Plans</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed flex-1">
                       Affordable Care Act compliant health insurance plans with essential health benefits and potential
                       subsidies for eligible individuals and families.
                     </p>
@@ -130,13 +130,13 @@ export default function HealthInsurancePage() {
 
               {/* Supplemental */}
               <FadeIn delay={0.3}>
-                <Card className="border-border">
-                  <CardContent className="p-8 space-y-4">
+                <Card className="border-border h-full">
+                  <CardContent className="p-8 space-y-4 h-full flex flex-col">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                       <Heart className="h-6 w-6 text-primary" />
                     </div>
                     <h3 className="text-2xl font-semibold text-foreground">Supplemental Coverage</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed flex-1">
                       Additional insurance options to fill coverage gaps and provide extra financial protection for
                       unexpected medical expenses.
                     </p>
