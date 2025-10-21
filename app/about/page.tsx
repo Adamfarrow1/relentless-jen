@@ -12,11 +12,58 @@ export default function AboutPage() {
             <div className="max-w-3xl mx-auto text-center space-y-6">
               <h1 className="text-4xl md:text-5xl font-bold text-foreground text-balance">About Relentless Jen</h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Building a better future through comprehensive insurance solutions and unwavering support for independent
-                agents.
+                Building a better future through comprehensive insurance solutions and unwavering support for
+                independent agents.
               </p>
             </div>
           </FadeIn>
+        </div>
+      </section>
+
+      {/* Jennifer Feliz Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <FadeIn>
+              <div className="grid md:grid-cols-[300px_1fr] gap-8 md:gap-12 items-start">
+                {/* Image */}
+                <div className="flex justify-center md:justify-start">
+                  <img
+                    src="/about-me-photo.jpeg"
+                    alt="Jennifer Feliz"
+                    className="w-64 h-64 md:w-72 md:h-72 object-cover rounded-2xl shadow-xl"
+                  />
+                </div>
+
+                {/* Content */}
+                <div className="space-y-6">
+                  <div className="space-y-3">
+                    <h2 className="text-3xl md:text-4xl font-bold text-foreground">Meet Jennifer Feliz</h2>
+                    <div className="w-16 h-1 bg-primary rounded-full"></div>
+                  </div>
+
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                    With over 15 years of experience in the insurance industry, Jennifer Feliz has dedicated her career
+                    to helping thousands of individuals and families across multiple states find the coverage that truly
+                    fits their needs and unique situations.
+                  </p>
+
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                    Her approach goes far beyond policies and premiums — it's rooted in genuine care, trust, and
+                    personalized guidance. Jennifer is passionate about empowering people with the knowledge and support
+                    they need to make confident decisions about their health, life, and financial protection.
+                  </p>
+
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                    Her reputation is built on compassion, integrity, and an unwavering commitment to serving her
+                    community with excellence. Whether it's securing Medicare coverage, health insurance, life
+                    insurance, or other essential benefits, Jennifer and her team at Relentless Insurance Solutions make
+                    every client feel valued, supported, and protected.
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </section>
 
@@ -28,9 +75,9 @@ export default function AboutPage() {
               <div className="text-center space-y-4">
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground">Our Mission</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  At Relentless Jen, our mission is to provide comprehensive insurance solutions that protect families while
-                  empowering independent agents with the tools, resources, and support they need to build successful
-                  businesses.
+                  At Relentless Jen, our mission is to provide comprehensive insurance solutions that protect families
+                  while empowering independent agents with the tools, resources, and support they need to build
+                  successful businesses.
                 </p>
               </div>
             </FadeIn>
@@ -39,10 +86,10 @@ export default function AboutPage() {
               <Card className="border-border">
                 <CardContent className="p-8">
                   <p className="text-muted-foreground leading-relaxed text-center">
-                    We believe that insurance is more than just policies—it's about peace of mind, financial security, and
-                    protecting what matters most. By partnering with independent agents across the country, we're able to
-                    deliver personalized service and expert guidance to families and individuals seeking the right
-                    coverage for their unique needs.
+                    We believe that insurance is more than just policies—it's about peace of mind, financial security,
+                    and protecting what matters most. By partnering with independent agents across the country, we're
+                    able to deliver personalized service and expert guidance to families and individuals seeking the
+                    right coverage for their unique needs.
                   </p>
                 </CardContent>
               </Card>
@@ -103,8 +150,8 @@ export default function AboutPage() {
                     </div>
                     <h3 className="text-2xl font-semibold text-foreground">Service</h3>
                     <p className="text-muted-foreground leading-relaxed flex-1">
-                      Exceptional service is at the heart of everything we do. We're committed to supporting our agents so
-                      they can deliver outstanding experiences to their clients.
+                      Exceptional service is at the heart of everything we do. We're committed to supporting our agents
+                      so they can deliver outstanding experiences to their clients.
                     </p>
                   </CardContent>
                 </Card>
@@ -214,8 +261,8 @@ export default function AboutPage() {
                 <div className="flex gap-4">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
                   <p className="text-muted-foreground leading-relaxed">
-                    <strong className="text-foreground">Technology Tools:</strong> Access modern platforms and tools that
-                    make selling and servicing policies easier than ever.
+                    <strong className="text-foreground">Technology Tools:</strong> Access modern platforms and tools
+                    that make selling and servicing policies easier than ever.
                   </p>
                 </div>
               </div>
