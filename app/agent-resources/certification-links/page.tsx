@@ -3,62 +3,20 @@ import { FadeIn } from "@/components/fade-in"
 
 export default function CertificationLinksPage() {
   const certificationLinks = [
-    {
-      name: "Aetna Certification",
-      url: "https://aetna.cmpsystem.com/page/login",
-    },
-    {
-      name: "Cigna For Brokers",
-      url: "https://cignaforbrokers.com/public/login",
-    },
-    {
-      name: "Clover (Miramar: Agent)",
-      url: "https://miramar-agent.com/identity/login?signin=ac6a7c283c33559f0f3e79649a5b0cd5",
-    },
-    {
-      name: "Devoted Agent",
-      url: "https://agent.devoted.com/",
-    },
-    {
-      name: "Elevance Anthem",
-      url: "https://elevancehealth.cmpsystem.com/page/login",
-    },
-    {
-      name: "Emblem Health (Miramar: Agent)",
-      url: "https://miramar-agent.com/identity/login?signin=72562b838e8081a2ac8e465f922224b8",
-    },
-    {
-      name: "Healthfirst",
-      url: "https://social.webcomserver.com/wpm/index.jsp?tenantName=healthfirst",
-    },
-    {
-      name: "VNS Health",
-      url: "https://account.evolvenxt.com/",
-    },
-    {
-      name: "Horizon/Braven (Miramar: Agent)",
-      url: "https://miramar-agent.com/identity/login?signin=2f9e6cda3ed203f9ec6b074dfe03e1fc",
-    },
-    {
-      name: "Humana",
-      url: "https://account.humana.com/",
-    },
-    {
-      name: "Molina Health",
-      url: "https://account.evolvenxt.com/",
-    },
-    {
-      name: "UnitedHealthcare (Jarvis)",
-      url: "https://www.uhcjarvis.com/content/jarvis/en/sign_in.html?open=space&name=Login&control=Login&doLogout=&clearsession=true&in_hi_userid=3780776&cached=true#/sign_in",
-    },
-    {
-      name: "Amerihealth",
-      url: "https://miramar-agent.com/identity/login?signin=ac6a7c283c33559f0f3e79649a5b0cd5",
-    },
-    {
-      name: "Centene (WellCare)",
-      url: "https://apps.pingone.com/de644ef6-ba0d-4312-aee6-ba0360ffc0d1/signon/?flowId=00eb2b2d-a568-4af9-aff4-882be243d46e",
-    },
+    { name: "Aetna Certification", url: "https://aetna.cmpsystem.com/page/login" },
+    { name: "Cigna For Brokers", url: "https://cignaforbrokers.com/public/login" },
+    { name: "Clover (Miramar: Agent)", url: "https://miramar-agent.com/identity/login?signin=ac6a7c283c33559f0f3e79649a5b0cd5" },
+    { name: "Devoted Agent", url: "https://agent.devoted.com/" },
+    { name: "Elevance Anthem", url: "https://elevancehealth.cmpsystem.com/page/login" },
+    { name: "Emblem Health (Miramar: Agent)", url: "https://miramar-agent.com/identity/login?signin=72562b838e8081a2ac8e465f922224b8" },
+    { name: "Healthfirst", url: "https://social.webcomserver.com/wpm/index.jsp?tenantName=healthfirst" },
+    { name: "VNS Health", url: "https://account.evolvenxt.com/" },
+    { name: "Horizon/Braven (Miramar: Agent)", url: "https://miramar-agent.com/identity/login?signin=2f9e6cda3ed203f9ec6b074dfe03e1fc" },
+    { name: "Humana", url: "https://account.humana.com/" },
+    { name: "Molina Health", url: "https://account.evolvenxt.com/" },
+    { name: "UnitedHealthcare (Jarvis)", url: "https://www.uhcjarvis.com/content/jarvis/en/sign_in.html?open=space&name=Login&control=Login&doLogout=&clearsession=true&in_hi_userid=3780776&cached=true#/sign_in" },
+    { name: "Amerihealth", url: "https://miramar-agent.com/identity/login?signin=ac6a7c283c33559f0f3e79649a5b0cd5" },
+    { name: "Centene (WellCare)", url: null }, // No link, broken
   ]
 
   return (
@@ -94,26 +52,36 @@ export default function CertificationLinksPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {certificationLinks.map((link, index) => (
                 <FadeIn key={link.name} delay={0.08 * index}>
-                  <a
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex items-center justify-between gap-3 p-6 rounded-lg border border-border bg-card hover:bg-accent/50 hover:border-primary/50 transition-all duration-200"
-                  >
-                    <span className="font-medium text-foreground group-hover:text-primary transition-colors">
-                      {link.name}
-                    </span>
-                    <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
-                  </a>
+                  {link.url ? (
+                    <a
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center justify-between gap-3 p-6 rounded-lg border border-border bg-card hover:bg-accent/50 hover:border-primary/50 transition-all duration-200"
+                    >
+                      <span className="font-medium text-foreground group-hover:text-white transition-colors">
+                        {link.name}
+                      </span>
+                      <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-white transition-colors flex-shrink-0" />
+                    </a>
+                  ) : (
+                    <div className="group flex items-center justify-between gap-3 p-6 rounded-lg border border-border bg-card hover:bg-accent/50 hover:border-primary/50 transition-all duration-200">
+                      <span className="font-medium text-foreground group-hover:text-white transition-colors">{link.name}</span>
+                      <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-white transition-colors flex-shrink-0" />
+                    </div>
+                  )}
                 </FadeIn>
               ))}
             </div>
 
             <FadeIn delay={1.0}>
-              <div className="text-center pt-8">
+              <div className="text-center pt-8 space-y-4">
                 <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
                   Need help with certifications? Contact our support team for guidance through the certification process
                   and requirements.
+                </p>
+                <p className="text-sm text-destructive max-w-2xl mx-auto">
+                  <strong>Note:</strong> The Centene (WellCare) certification portal link is currently unavailable.
                 </p>
               </div>
             </FadeIn>

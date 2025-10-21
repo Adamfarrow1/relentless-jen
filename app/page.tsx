@@ -40,14 +40,7 @@ export default function HomePage() {
 
             <FadeIn delay={0.6}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-                <Button
-                  size="lg"
-                  asChild
-                  variant="outline"
-                  className="text-base px-8 h-12 bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition-colors"
-                >
-                  <Link href="/contact">Become an Agent</Link>
-                </Button>
+
                 <Button
                   size="lg"
                   asChild
@@ -56,6 +49,14 @@ export default function HomePage() {
                   <a href="https://www.planenroll.com/?purl=Jennifer-Feliz" target="_blank" rel="noopener noreferrer">
                     Get a Quote
                   </a>
+                </Button>
+                <Button
+                  size="lg"
+                  asChild
+                  variant="outline"
+                  className="text-base px-8 h-12 bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition-colors"
+                >
+                  <Link href="/contact">Become an Agent</Link>
                 </Button>
               </div>
             </FadeIn>

@@ -15,6 +15,15 @@ export default function ContactPage() {
               Have questions? Want to become an agent? We're here to help you get started on your journey with
               Relentless Jen.
             </p>
+            <Button
+              size="lg"
+              asChild
+              className="mt-4 px-8 h-12 bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg"
+            >
+              <a href="https://www.planenroll.com/?purl=Jennifer-Feliz" target="_blank" rel="noopener noreferrer">
+                Get a Quote
+              </a>
+            </Button>
           </div>
         </div>
       </section>
