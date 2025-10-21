@@ -52,7 +52,7 @@ export default function ContactPage() {
                         </div>
                         <div>
                           <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                          <p className="text-muted-foreground">jenfeliz21@gmail.com</p>
+                          <p className="text-muted-foreground">JJRelentless.Solutions@gmail.com</p>
                           <p className="text-sm text-muted-foreground mt-1">We'll respond within 24 hours</p>
                         </div>
                       </CardContent>

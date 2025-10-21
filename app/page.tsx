@@ -11,14 +11,7 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center">
         {/* Background Video */}
         <div className="absolute inset-0 -z-10 overflow-hidden">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            className="w-full h-full object-cover min-h-screen"
-          >
+          <video autoPlay loop muted playsInline preload="auto" className="w-full h-full object-cover min-h-screen">
             <source src="/running.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -32,9 +25,9 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto text-center space-y-10">
             <FadeIn direction="down" delay={0.2}>
               <h1 className="text-5xl md:text-7xl font-bold text-white text-balance leading-[1.1] drop-shadow-lg">
-                Empowering Agents.
+                Empowering <span className="text-red-400">Agents.</span>
                 <br />
-                Protecting Families.
+                Protecting <span className="text-red-400">Families.</span>
               </h1>
             </FadeIn>
 
@@ -47,11 +40,22 @@ export default function HomePage() {
 
             <FadeIn delay={0.6}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-                <Button size="lg" asChild className="text-base px-8 h-12">
+                <Button
+                  size="lg"
+                  asChild
+                  variant="outline"
+                  className="text-base px-8 h-12 bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition-colors"
+                >
                   <Link href="/contact">Become an Agent</Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild className="text-base px-8 h-12 bg-white/10 border-white/20 text-white hover:bg-white/20">
-                  <Link href="/about">Learn More</Link>
+                <Button
+                  size="lg"
+                  asChild
+                  className="text-base px-8 h-12 bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg"
+                >
+                  <a href="https://www.planenroll.com/?purl=Jennifer-Feliz" target="_blank" rel="noopener noreferrer">
+                    Get a Quote
+                  </a>
                 </Button>
               </div>
             </FadeIn>
@@ -83,8 +87,8 @@ export default function HomePage() {
                   </div>
                   <h3 className="text-xl font-semibold text-foreground">Integrity</h3>
                   <p className="text-muted-foreground leading-relaxed flex-1">
-                    We operate with transparency and honesty in every interaction, building lasting relationships based on
-                    trust.
+                    We operate with transparency and honesty in every interaction, building lasting relationships based
+                    on trust.
                   </p>
                 </CardContent>
               </Card>
@@ -215,8 +219,8 @@ export default function HomePage() {
               <Users className="h-12 w-12 mx-auto" />
               <h2 className="text-3xl md:text-4xl font-bold text-balance">Resources to Help You Succeed</h2>
               <p className="text-lg leading-relaxed opacity-90">
-                Access carrier certifications, partner portals, training materials, and compliance information all in one
-                place.
+                Access carrier certifications, partner portals, training materials, and compliance information all in
+                one place.
               </p>
               <Button size="lg" variant="secondary" asChild>
                 <Link href="/agent-resources">Explore Agent Resources</Link>

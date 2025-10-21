@@ -130,7 +130,7 @@ export default function AgentResourcesPage() {
       </section>
 
       {/* Contracting Section */}
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-8">
             <FadeIn>
@@ -259,7 +259,7 @@ export default function AgentResourcesPage() {
             </FadeIn>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Support Section */}
       <section className="py-20 bg-card">
